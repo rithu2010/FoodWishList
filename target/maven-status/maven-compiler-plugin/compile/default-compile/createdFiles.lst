@@ -1,0 +1,6 @@
+com\example\foodwishlistmanager\entity\FoodWishlistItem.class
+com\example\foodwishlistmanager\FoodWishlistManagerApplication.class
+com\example\foodwishlistmanager\repository\FoodWishlistRepository.class
+com\example\foodwishlistmanager\dto\FoodWishlistRequest.class
+com\example\foodwishlistmanager\service\FoodWishlistService.class
+com\example\foodwishlistmanager\controller\FoodWishlistController.class
