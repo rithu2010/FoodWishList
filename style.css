@@ -1,0 +1,287 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #f9fafb, #eef2ff);
+    color: #111827;
+    min-height: 100vh;
+}
+
+.app-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 3rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #111827;
+}
+
+header p {
+    color: #6b7280;
+}
+
+main {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.5fr);
+    gap: 1.5rem;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem 1.75rem;
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+}
+
+.form-card h2,
+.list-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+    color: #374151;
+}
+
+.required {
+    color: #ef4444;
+    margin-left: 0.15rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.55rem 0.7rem;
+    border-radius: 0.6rem;
+    border: 1px solid #d1d5db;
+    font-size: 0.95rem;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.35);
+}
+
+.form-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    border-radius: 9999px;
+    padding: 0.6rem 1.3rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    transition: background-color 0.15s ease, transform 0.05s ease, box-shadow 0.15s ease;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#submit-btn {
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: white;
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.35);
+}
+
+#submit-btn:hover {
+    background: linear-gradient(135deg, #4338ca, #4f46e5);
+}
+
+.secondary {
+    background-color: #e5e7eb;
+    color: #111827;
+    box-shadow: none;
+}
+
+.secondary.small {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.8rem;
+}
+
+.secondary:hover {
+    background-color: #d1d5db;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.list-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+
+.food-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.food-card {
+    border-radius: 0.9rem;
+    border: 1px solid #e5e7eb;
+    padding: 0.9rem 1rem;
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 1.2fr);
+    gap: 0.75rem;
+    align-items: center;
+    background: #f9fafb;
+}
+
+.food-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.food-title {
+    font-weight: 600;
+    color: #111827;
+}
+
+.food-restaurant {
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.food-meta {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-top: 0.2rem;
+}
+
+.rating-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    border-radius: 9999px;
+    padding: 0.1rem 0.5rem;
+    background-color: #fef3c7;
+    color: #92400e;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.food-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.4rem;
+}
+
+.btn-edit {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    padding-inline: 0.85rem;
+}
+
+.btn-edit:hover {
+    background-color: #dbeafe;
+}
+
+.btn-delete {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    padding-inline: 0.85rem;
+}
+
+.btn-delete:hover {
+    background-color: #fecaca;
+}
+
+.empty-state {
+    margin-top: 0.75rem;
+    padding: 0.8rem 1rem;
+    border-radius: 0.75rem;
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    font-size: 0.9rem;
+}
+
+#alerts {
+    margin-bottom: 0.75rem;
+}
+
+.alert {
+    padding: 0.7rem 0.9rem;
+    border-radius: 0.7rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+}
+
+.alert-success {
+    background-color: #ecfdf3;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.alert-error {
+    background-color: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    color: #9ca3af;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 900px) {
+    main {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .food-card {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .food-actions {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .app-container {
+        padding-inline: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
+
